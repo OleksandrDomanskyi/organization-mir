@@ -1,0 +1,81 @@
+@import '../../styles/main.scss';
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text {
+    margin-bottom: 10px;
+}
+
+// .text__title {
+//     margin-bottom: 10px;
+// }
+
+.list {
+    margin-bottom: 10px;
+    list-style: inherit;
+}
+
+.item {
+    margin-bottom: 10px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+
+    @include tablet {
+        margin-top: 30px;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    @include desktop {
+        margin-top: 50px;
+    }
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #eeeeee;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+        opacity: 1;
+    }
+
+    @include tablet {
+        width: calc(100% / 2 - 30px);
+        margin-right: 15px;
+        margin-left: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include desktop {
+        width: calc(100% / 3 - 30px);
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+// .photo {
+//     margin-bottom: 10px;
+// }
+
+.name {
+    margin: 10px auto;
+    text-align: center;
+}
